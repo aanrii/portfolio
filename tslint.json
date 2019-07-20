@@ -1,0 +1,12 @@
+{
+  "extends": ["tslint:latest","tslint-react","tslint-config-parser"],
+  "rulesDirectory": ["tslint-plugin-prettier"],
+  "rules": {
+    "prettier": true
+  },
+  "jsRules": {
+    "max-line-length": {
+      "options": [120]
+    }
+  }
+}
