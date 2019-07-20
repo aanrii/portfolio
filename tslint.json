@@ -1,12 +1,8 @@
 {
-  "extends": ["tslint:latest","tslint-react","tslint-config-parser"],
+  "extends": ["tslint-react", "tslint-config-prettier"],
   "rulesDirectory": ["tslint-plugin-prettier"],
   "rules": {
-    "prettier": true
-  },
-  "jsRules": {
-    "max-line-length": {
-      "options": [120]
-    }
+    "prettier": true,
+    "import-name": false
   }
 }

@@ -1,15 +1,15 @@
-import Typography from "typography"
+import Typography from 'typography'
 
-const typography = new Typography({
-  overrideStyles: ({ adjustFontSizeTo, rhythm }, options, styles) => ({
+const typography: Typography = new Typography({
+  overrideStyles: () => ({
     'h1, h2, h3, h4, h5, h6, p, a': {
-      color: '#FCFEFF !important'
+      color: '#FCFEFF !important',
     },
-    'span': {
+    span: {
       color: '#CACBCC',
-      'font-size': '16px'
-    }
-  })
+      'font-size': '16px',
+    },
+  }),
 })
 
 // Export helper functions

@@ -1,19 +1,6 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
-import Layout from "../components/layout"
-
-export default ({ data }) => (
-  <Layout>
-    {data.allMarkdownRemark.edges.map(({ node }) => (
-      <div key={node.id}>
-        <h2>
-          <Link to={node.fields.slug}>{node.frontmatter.title}</Link>{" "}
-          <span>— {node.frontmatter.date}</span>
-        </h2>
-      </div>
-    ))}
-  </Layout>
-)
+import * as React from 'react'
+import { Link, graphql } from 'gatsby'
+import Layout from '../components/layout'
 
 export const query = graphql`
   query {
@@ -34,3 +21,37 @@ export const query = graphql`
     }
   }
 `
+interface IndexProps {
+  data: {
+    allMarkdownRemark: {
+      totalCount: number
+      edges: Array<{
+        node: {
+          id: string
+          frontmatter: {
+            title: string
+            date: string
+          }
+          fields: {
+            slug: string
+          }
+        }
+      }>
+    }
+  }
+}
+
+const index: React.SFC<IndexProps> = ({ data }) => (
+  <Layout>
+    {data.allMarkdownRemark.edges.map(({ node }) => (
+      <div key={node.id}>
+        <h2>
+          <Link to={node.fields.slug}>{node.frontmatter.title}</Link>{' '}
+          <span>— {node.frontmatter.date}</span>
+        </h2>
+      </div>
+    ))}
+  </Layout>
+)
+
+export default index

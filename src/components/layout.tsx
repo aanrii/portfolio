@@ -1,8 +1,8 @@
-import React from "react"
-import Header from "./header"
-import { Global, jsx } from "@emotion/core"
+import * as React from 'react'
+import Header from './header'
+import { Global, jsx } from '@emotion/core'
 
-const layout: React.SFC = ({children}) => (
+const layout: React.SFC<{ children?: React.ReactNode }> = ({ children }) => (
   <div
     className="outer"
     css={{
@@ -14,8 +14,8 @@ const layout: React.SFC = ({children}) => (
   >
     <Global
       styles={{
-        "*": {
-          background: "#1C2633",
+        '*': {
+          background: '#1C2633',
         },
       }}
     />
