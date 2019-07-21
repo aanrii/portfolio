@@ -34,7 +34,7 @@ const header: React.SFC = () => (
         <Link to="/">works</Link>
       </div>
       <div>
-        <Link to="about">contact</Link>
+        <Link to="/contact">contact</Link>
       </div>
     </div>
   </div>

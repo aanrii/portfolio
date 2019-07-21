@@ -24,17 +24,28 @@ GraphQLが導入されていることから、敷居が高いと思われがち�
 - [Getting started with Typescript on Gatsby](https://medium.com/maxime-heckel/getting-started-with-typescript-on-gatsby-8544b47c1d27)
 - [gatsby/examples/using-typescript](https://github.com/gatsbyjs/gatsby/tree/master/examples/using-typescript)
 
+#### コンテンツ管理 (gatsby-source-filesystem + transformer)
+[gatsby-source-filesystem](https://www.gatsbyjs.org/packages/gatsby-source-filesystem/)のおかげで、リポジトリ内にコンテンツを置いておけばGraphQLでそれを利用することができる。また、[gatsby-transformer-remark](https://www.gatsbyjs.org/packages/gatsby-transformer-remark/)など、各種transformerプラグインを導入することで、ビルド時にHTMLコードを生成し、それをサイトに埋め込むことが可能となる。パース処理等を自分で書くことなく、コンテンツの"情報"と"表現"を完全に分離して管理する仕組みが、すでに用意されている。上記プラグインの利用し、記事の内容は全てMarkdownで書いている。
+
+#### デザイン, スタイリング (Typography.js, emotion)
+そもそも自分はデザイン全般に関して技術的にもセンス的にも自信がない。だから、リッチなものを目指すと絶対失敗すると考え、キャラクターベースにした。その際、以下のサイトを参考にした。
+
+- https://ssig33.com/
+- https://christine.website/
+
+さて、Gatsbyでは[Typography.js](https://kyleamathews.github.io/typography.js/)を用いたスタイリング方法が[紹介されている](https://www.gatsbyjs.org/docs/typography-js/)。これを踏襲して、全体的なフォント設定を行った (ほぼデフォルトのままだが)。これだけでも幾分マシな見た目になる。
+
+また、全体のレイアウトには、こちらもGatsbyのチュートリアルで紹介されている[Emotion](https://emotion.sh/docs/introduction)を使った。ComponentのpropsのようにCSSプロパティを書けるので、直感的にスタイリングができる。
+
 #### コンテンツ配信 (Netlify)
 
 コンテンツ配信には[Netlify](https://www.netlify.com/)を使った。Gatsbyと連携する上で特別な設定は一切必要なく、GitHubのリポジトリURLを貼るだけで簡単にサイトを公開できた。カスタムドメインの使用に際しては、以下のページを参照した (主にxdomainユーザ向け)。
 - [Netlifyで独自ドメインを設定する](https://www.ravness.com/2018/07/netlifydomain/)
 
-#### デザイン, スタイリング
-そもそも自分はデザイン全般に関して特にセンスがない。だから、リッチなものを目指すと絶対失敗すると考え、キャラクターベースにした。その際、以下のサイトを参考にした。
+### 所感
+Gatsby + Netlifyのタッグにより、簡単に静的Webサイトを作って公開することができた。独自ドメイン料以外すべて無料というのもすごいポイントだと思う。
 
-- https://ssig33.com/
-- https://christine.website/
+### 課題
+とにかくWebサイトを完成させることに全振りしたため、デザインはかなり簡素にした（ページ上の情報量を下げればその分実装量も減る）。ここはデザイナーの人にお金払ってでもイイ感じのものを作りたいなあとは思っている。
 
-さて、Gatsbyでは[Typography.js](https://kyleamathews.github.io/typography.js/)を用いたスタイリング方法が[紹介されている](https://www.gatsbyjs.org/docs/typography-js/)。これを踏襲して、全体的なフォント設定を行った (ほぼデフォルトのままだが)。
-
-また、全体のレイアウトには[Emotion](https://emotion.sh/docs/introduction)を使った。こちらも、Gatsbyのチュートリアルで紹介されている。
+また、contactページが非常に簡素なので、NetlifyのForms機能を使って連絡フォームを実装するなどしたい。

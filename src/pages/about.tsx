@@ -9,20 +9,17 @@ const about: React.SFC = () => (
       css={{
         display: 'flex',
         flexWrap: 'wrap',
+        '.about-column': {
+          margin: '0px 10px 10px 0px',
+        },
       }}
     >
-      <Global
-        styles={{
-          '.about-column': {
-            margin: '0px 10px 10px 0px',
-          },
-        }}
-      />
       <div
         className="about-column"
         css={{
           width: '240px',
           height: '240px',
+          margin: '0px 10px 10px 0px',
         }}
       >
         <img
