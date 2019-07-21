@@ -1,6 +1,6 @@
 import * as React from 'react'
 import Header from './header'
-import { Global, jsx } from '@emotion/core'
+import { jsx } from '@emotion/core'
 
 const layout: React.SFC<{ children?: React.ReactNode }> = ({ children }) => (
   <div
@@ -12,13 +12,6 @@ const layout: React.SFC<{ children?: React.ReactNode }> = ({ children }) => (
       display: `block`,
     }}
   >
-    <Global
-      styles={{
-        '*': {
-          background: '#1C2633',
-        },
-      }}
-    />
     <Header />
     <div
       className="child"

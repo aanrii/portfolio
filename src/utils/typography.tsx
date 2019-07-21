@@ -2,7 +2,7 @@ import Typography from 'typography'
 
 const typography: Typography = new Typography({
   overrideStyles: () => ({
-    'h1, h2, h3, h4, h5, h6, p, a': {
+    'h1, h2, h3, h4, h5, h6, p, a, li': {
       color: '#FCFEFF !important',
     },
     span: {

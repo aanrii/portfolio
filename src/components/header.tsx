@@ -22,22 +22,18 @@ const header: React.SFC = () => (
         margin: '20px 0px',
         display: 'flex',
         justifyContent: 'center',
+        div: {
+          margin: '0px 10px',
+        },
       }}
     >
-      <Global
-        styles={{
-          '.menu-item': {
-            margin: '0px 10px',
-          },
-        }}
-      />
-      <div className="menu-item">
+      <div>
         <Link to="/about">about</Link>
       </div>
-      <div className="menu-item">
+      <div>
         <Link to="/">works</Link>
       </div>
-      <div className="menu-item">
+      <div>
         <Link to="about">contact</Link>
       </div>
     </div>

@@ -4,7 +4,12 @@ import Layout from '../components/layout'
 
 export const query = graphql`
   query {
-    allMarkdownRemark {
+    allMarkdownRemark(
+      sort: {
+        fields: [frontmatter___date, frontmatter___title]
+        order: [DESC, DESC]
+      }
+    ) {
       totalCount
       edges {
         node {
