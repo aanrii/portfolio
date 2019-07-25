@@ -56,7 +56,7 @@ const about: React.SFC = () => (
           <ul>
             <li>Web programming (Java, JS, Python, ...) </li>
             <li>System architecture design</li>
-            <li>Continuous integration and continuous delivery</li>
+            <li>CI/CD</li>
             <li>
               Music producing (track making, recording, mixing and mastering)
             </li>
