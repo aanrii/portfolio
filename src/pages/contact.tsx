@@ -7,9 +7,6 @@ const contact: React.SFC = () => (
     <div>
       <p>
         <a href="mailto:aanrii0830.2@gmail.com">aanrii0830.2@gmail.com</a>
-        までお願いします。
-        <br />
-        あまりマメに見てないので返事が遅れるかもしれませんが、ご容赦ください。
       </p>
     </div>
   </Layout>

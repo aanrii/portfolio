@@ -10,7 +10,7 @@ const about: React.SFC = () => (
         display: 'flex',
         flexWrap: 'wrap',
         '.about-column': {
-          margin: '0px 10px 10px 0px',
+          margin: '10px 20px 10px 0px',
         },
       }}
     >
@@ -19,7 +19,6 @@ const about: React.SFC = () => (
         css={{
           width: '240px',
           height: '240px',
-          margin: '0px 10px 10px 0px',
         }}
       >
         <img
@@ -33,16 +32,44 @@ const about: React.SFC = () => (
       <div
         className="about-column"
         css={{
-          minWidth: '300px',
-          minHeight: '300px',
+          width: '300px',
+          height: '300px',
+          wordWrap: 'break-word',
         }}
       >
         <p>
-          Name: Anri Kobayashi
-          <br />
-          Birth: 1992/08/30
-          <br />
-          Skills: Web Programming, Music Production
+          <h3>Basic information</h3>
+          <ul>
+            <li>Name: Anri Kobayashi</li>
+            <li>Birth: 1992/08/30</li>
+            <li>Address: Tokyo, Japan</li>
+          </ul>
+        </p>
+        <p>
+          <h3>Job</h3>
+          <ul>
+            <li>Web engineer</li>
+          </ul>
+        </p>
+        <p>
+          <h3>Skills</h3>
+          <ul>
+            <li>Web programming (Java, JS, Python, ...) </li>
+            <li>System architecture design</li>
+            <li>Continuous integration and continuous delivery</li>
+            <li>
+              Music producing (track making, recording, mixing and mastering)
+            </li>
+          </ul>
+          <a href="https://github.com/aanrii/cv">CV (in Japanese)</a>
+        </p>
+        <p>
+          <h3>Links</h3>
+          <ul>
+            <li>
+              <a href="https://twitter.com/aanrii">Twitter</a>
+            </li>
+          </ul>
         </p>
       </div>
     </div>
