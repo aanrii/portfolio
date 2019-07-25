@@ -54,9 +54,12 @@ const about: React.SFC = () => (
         <p>
           <h3>Skills</h3>
           <ul>
-            <li>Web programming (Java, JS, Python, ...) </li>
-            <li>System architecture design</li>
-            <li>CI/CD</li>
+            <li>Web development</li>
+            <ul>
+              <li>Web programming (Java, JS, Python, ...) </li>
+              <li>System architecture design</li>
+              <li>CI/CD</li>
+            </ul>
             <li>
               Music producing (track making, recording, mixing and mastering)
             </li>
