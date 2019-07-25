@@ -1,6 +1,7 @@
 import * as React from 'react'
 import Header from './header'
 import { jsx } from '@emotion/core'
+import { Helmet } from 'react-helmet'
 
 const layout: React.SFC<{ children?: React.ReactNode }> = ({ children }) => (
   <div
@@ -12,6 +13,10 @@ const layout: React.SFC<{ children?: React.ReactNode }> = ({ children }) => (
       display: `block`,
     }}
   >
+    <Helmet>
+      <meta charSet="utf-8" />
+      <title>aanrii.com</title>
+    </Helmet>
     <Header />
     <div
       className="child"
