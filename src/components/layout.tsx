@@ -15,7 +15,7 @@ const layout: React.SFC<{ children?: React.ReactNode }> = ({ children }) => (
   >
     <Helmet>
       <meta charSet="utf-8" />
-      <title>aanrii.com</title>
+      <title>portfolio.aanrii.me</title>
     </Helmet>
     <Header />
     <div

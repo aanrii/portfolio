@@ -14,7 +14,7 @@ const header: React.SFC = () => (
         margin: '20px 0px',
       }}
     >
-      <h1>aanrii.com</h1>
+      <h1>aanrii's portfolio</h1>
     </div>
     <div
       className="menu"
